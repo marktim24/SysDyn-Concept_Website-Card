@@ -32,16 +32,30 @@ const Gallery: FC = () => {
 					scrollbar={{ draggable: true }}
 					direction={'horizontal'}
 					mousewheel={true}
+					breakpoints={{
+						320: {
+							slidesPerView: 1,
+							spaceBetween: 10,
+						},
+						480: {
+							slidesPerView: 2,
+							spaceBetween: 20,
+						},
+						640: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+						},
+					}}
 				>
 					{portfolioCards.map(card => (
 						<SwiperSlide key={card.id}>
 							<Card cardName={card.cardName} cardImg={card.cardImg} />
 						</SwiperSlide>
 					))}
-					<div className='swiper-button-next rounded-full p-10 bg-white'>
+					<div className='swiper-button-next rounded-full p-10 bg-black opacity-50'>
 						<img src='/icons/arrow-icon.svg' alt='Next' />
 					</div>
-					<div className='swiper-button-prev rounded-full p-10 bg-white'>
+					<div className='swiper-button-prev rounded-full p-10 bg-black opacity-50'>
 						<img src='/icons/arrow-icon.svg' alt='Previous' />
 					</div>
 				</Swiper>

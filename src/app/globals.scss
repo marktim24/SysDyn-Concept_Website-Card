@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700&display=swap');
 @import '/src/styles/swiper';
 
-:root  {
+:root {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
@@ -37,6 +37,21 @@ header {
 	@apply p-16;
 }
 
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	padding: 0 120px;
+
+	@media (max-width: 1120px) {
+		padding: 0 60px;
+	}
+
+	@media (max-width: 640px) {
+		padding: 0 30px;
+	}
+}
+
 .scroll-container {
 	height: 100vh;
 	overflow-y: scroll;
@@ -48,13 +63,6 @@ header {
 
 .scroll-page {
 	scroll-snap-align: start;
-}
-
-.container {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 100%;
-	padding: 0 120px;
 }
 
 .buttons {

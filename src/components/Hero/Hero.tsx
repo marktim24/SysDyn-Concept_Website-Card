@@ -6,17 +6,17 @@ const Hero: FC = () => {
 		<main className='flex flex-col justify-between flex-grow'>
 			<div className='flex flex-col justify-between flex-grow'>
 				<div className='flex flex-col mt-32'>
-					<h1 className='text-6xl font-unbounded text-center leading-relaxed'>
+					<h1 className='text-2xl sm:text-4xl md:text-6xl font-unbounded text-center leading-relaxed'>
 						Разработка программного обеспечения, мобильных и веб-приложений
 					</h1>
-					<div className='buttons self-center p-12'>
+					<div className='buttons self-center p-12 flex flex-col sm:flex-row'>
 						<button className='btn outline'>iosemenov@sysdyn.ru</button>
 						<button className='btn fill'>+7 (931) 105-98-80</button>
 					</div>
 				</div>
 				<nav className='bottom-nav border-t border-b mt-auto'>
 					<div className='container'>
-						<ul className='w-full flex flex-row justify-between items-center text-xl'>
+						<ul className='w-full flex flex-col sm:flex-row flex-wrap justify-between items-center text-xl'>
 							<li>WEB Разработка</li>
 							<li className='btn service'>
 								<Link href='/'>
