@@ -1,0 +1,13 @@
+h1,
+h2,
+h3 {
+	@apply font-unbounded;
+}
+
+h1 {
+	@apply text-4xl sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-unbounded leading-relaxed;
+}
+
+h2 {
+	@apply text-4xl font-unbounded leading-relaxed;
+}

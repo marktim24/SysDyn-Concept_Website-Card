@@ -6,7 +6,7 @@ const Hero: FC = () => {
 		<main className='flex flex-col justify-between flex-grow'>
 			<div className='flex flex-col justify-between flex-grow'>
 				<div className='flex flex-col mt-32'>
-					<h1 className='text-2xl sm:text-4xl md:text-6xl font-unbounded text-center leading-relaxed'>
+					<h1 className='text-center'>
 						Разработка программного обеспечения, мобильных и веб-приложений
 					</h1>
 					<div className='buttons self-center p-12 flex flex-col sm:flex-row'>
@@ -18,6 +18,7 @@ const Hero: FC = () => {
 					<div className='container'>
 						<ul className='w-full flex flex-col sm:flex-row flex-wrap justify-between items-center text-xl'>
 							<li>WEB Разработка</li>
+							{/* TODO: Optimize the img to Image/next */}
 							<li className='btn service'>
 								<Link href='/'>
 									<img src='/icons/arrow-icon.svg' alt='Service Button' />

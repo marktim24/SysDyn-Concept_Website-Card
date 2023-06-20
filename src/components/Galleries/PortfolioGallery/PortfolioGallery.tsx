@@ -12,7 +12,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
-const Gallery: FC = () => {
+const PortfolioGallery: FC = () => {
 	return (
 		<section>
 			<div className='container flex justify-center items-center h-screen'>
@@ -25,7 +25,7 @@ const Gallery: FC = () => {
 						prevEl: '.swiper-button-prev',
 					}}
 					loop={true}
-					loopedSlides={3} // add this line
+					loopedSlides={3}
 					pagination={{
 						dynamicBullets: true,
 					}}
@@ -49,9 +49,14 @@ const Gallery: FC = () => {
 				>
 					{portfolioCards.map(card => (
 						<SwiperSlide key={card.id}>
-							<Card cardName={card.cardName} cardImg={card.cardImg} />
+							<Card
+								cardName={card.cardName}
+								cardImg={card.cardImg}
+								cardTags={card.cardTags}
+							/>
 						</SwiperSlide>
 					))}
+					{/* TODO: Optimize the img to Image/next */}
 					<div className='swiper-button-next rounded-full p-10 bg-black opacity-50'>
 						<img src='/icons/arrow-icon.svg' alt='Next' />
 					</div>
@@ -64,4 +69,4 @@ const Gallery: FC = () => {
 	)
 }
 
-export default Gallery
+export default PortfolioGallery
