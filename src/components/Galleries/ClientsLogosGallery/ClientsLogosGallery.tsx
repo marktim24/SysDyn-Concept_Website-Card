@@ -40,7 +40,7 @@ const ClientsLogosGallery: FC = () => {
 					<SwiperSlide key={index}>
 						{/* TODO: Optimize the img to Image/next */}
 						<img
-							src={imageLogo.imgURL.src}
+							src={imageLogo.imgURL}
 							className='flex'
 							alt='Our Clients Logo'
 						/>

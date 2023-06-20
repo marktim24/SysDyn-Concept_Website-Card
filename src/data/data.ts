@@ -63,7 +63,9 @@ LogosImages.keys().forEach(key => {
 })
 
 export const ClientsLogos: TypeClientsLogos[] = Array.from(logosImagesSet).map(
-	imgURL => ({ imgURL })
+	image => ({
+		imgURL: image.src,
+	})
 )
 //
 
@@ -83,5 +85,7 @@ CompanyPhotosImages.keys().forEach(key => {
 
 export const CompanyPhotos: TypeClientsLogos[] = Array.from(
 	companyPhotosSet
-).map(imgURL => ({ imgURL }))
+).map(image => ({
+	imgURL: image.src,
+}))
 //
