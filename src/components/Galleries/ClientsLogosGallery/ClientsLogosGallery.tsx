@@ -1,4 +1,4 @@
-import { ClientsLogos } from '@/data/data'
+import { clientsLogos } from '@/data/data'
 import { FC } from 'react'
 import { Grid } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -36,14 +36,10 @@ const ClientsLogosGallery: FC = () => {
 				direction={'horizontal'}
 				className='mySwiper'
 			>
-				{ClientsLogos.map((imageLogo, index) => (
+				{clientsLogos.map((imageLogo, index) => (
 					<SwiperSlide key={index}>
 						{/* TODO: Optimize the img to Image/next */}
-						<img
-							src={imageLogo.imgURL}
-							className='flex'
-							alt='Our Clients Logo'
-						/>
+						<img src={imageLogo} className='flex' alt='Our Clients Logo' />
 					</SwiperSlide>
 				))}
 			</Swiper>

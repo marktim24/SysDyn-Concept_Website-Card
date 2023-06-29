@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
@@ -6,7 +7,7 @@ const Hero: FC = () => {
 		<main className='flex flex-col justify-between flex-grow'>
 			<div className='flex flex-col justify-between flex-grow'>
 				<div className='flex flex-col mt-32'>
-					<h1 className='text-center'>
+					<h1 className='text-center mx-auto max-w-screen-xl leading-normal'>
 						Разработка программного обеспечения, мобильных и веб-приложений
 					</h1>
 					<div className='buttons self-center p-12 flex flex-col sm:flex-row'>
@@ -21,19 +22,37 @@ const Hero: FC = () => {
 							{/* TODO: Optimize the img to Image/next */}
 							<li className='btn service'>
 								<Link href='/'>
-									<img src='/icons/arrow-icon.svg' alt='Service Button' />
+									<Image
+										src='/icons/arrow-icon.svg'
+										alt='Service Button'
+										width={25}
+										height={25}
+										layout='responsive'
+									/>
 								</Link>
 							</li>
 							<li>Мобильная разработка</li>
 							<li className='btn service'>
 								<Link href='/'>
-									<img src='/icons/arrow-icon.svg' alt='Service Button' />
+									<Image
+										src='/icons/arrow-icon.svg'
+										alt='Service Button'
+										width={25}
+										height={25}
+										layout='responsive'
+									/>
 								</Link>
 							</li>
 							<li>3D разработка в WEB</li>
 							<li className='btn service'>
 								<Link href='/'>
-									<img src='/icons/arrow-icon.svg' alt='Service Button' />
+									<Image
+										src='/icons/arrow-icon.svg'
+										alt='Service Button'
+										width={25}
+										height={25}
+										layout='responsive'
+									/>
 								</Link>
 							</li>
 							<li>Геймификация бизнеса</li>

@@ -1,4 +1,5 @@
 import { IPortfolioCard } from '@/data/data'
+import Image from 'next/image'
 import { FC } from 'react'
 
 const Card: FC<IPortfolioCard> = ({ cardName, cardImg, cardTags }) => {
@@ -6,7 +7,15 @@ const Card: FC<IPortfolioCard> = ({ cardName, cardImg, cardTags }) => {
 		<div>
 			<div className='h-full w-full flex flex-col'>
 				{/* TODO: Optimize the img to Image/next */}
-				<img src={cardImg} alt='Portfolio Card Image' />
+				<div className='image_container'>
+					<Image
+						src={cardImg}
+						width={500}
+						height={500}
+						alt='Portfolio Card Image'
+					/>
+				</div>
+
 				<h1 className='text-xl self-center'>{cardName}</h1>
 			</div>
 

@@ -45,47 +45,23 @@ export const portfolioCards: IPortfolioCard[] = [
 ]
 
 // Logos from clientsLogos folder in ClientsLogosGallery component
-
-export type TypeClientsLogos = {
-	imgURL: string
-}
-
-const LogosImages = require.context(
-	'public/images/clientsLogos',
-	false,
-	/\.(svg|png|jpg|jpeg)$/
-)
-
-const logosImagesSet = new Set()
-
-LogosImages.keys().forEach(key => {
-	logosImagesSet.add(LogosImages(key).default)
-})
-
-export const ClientsLogos: TypeClientsLogos[] = Array.from(logosImagesSet).map(
-	image => ({
-		imgURL: image.src,
-	})
-)
+export const clientsLogos: string[] = [
+	'/images/ClientsLogos/barentzLogo.svg',
+	'/images/ClientsLogos/metalurgLogo.svg',
+	'/images/ClientsLogos/pultruLogo.svg',
+	'/images/ClientsLogos/sampoLogo.png',
+	'/images/ClientsLogos/SberbankLogo.svg',
+	'/images/ClientsLogos/skbBankLogo.svg',
+	'/images/ClientsLogos/SUEKLogo.svg',
+	'/images/ClientsLogos/ticktimeLogo.svg',
+	'/images/ClientsLogos/visitKareliaLogo.svg',
+]
 //
 
 // Photos from CompanyPhotos folder in PhotoGallery component
-
-const CompanyPhotosImages = require.context(
-	'public/images/CompanyPhotos',
-	false,
-	/\.(svg|png|jpg|jpeg)$/
-)
-
-const companyPhotosSet = new Set()
-
-CompanyPhotosImages.keys().forEach(key => {
-	companyPhotosSet.add(CompanyPhotosImages(key).default)
-})
-
-export const CompanyPhotos: TypeClientsLogos[] = Array.from(
-	companyPhotosSet
-).map(image => ({
-	imgURL: image.src,
-}))
+export const companyPhotos: string[] = [
+	'/images/CompanyPhotos/doverie.png',
+	'/images/CompanyPhotos/opit1920.png',
+	'/images/CompanyPhotos/semenov.png',
+]
 //

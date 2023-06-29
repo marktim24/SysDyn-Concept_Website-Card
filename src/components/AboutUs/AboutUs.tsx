@@ -10,7 +10,7 @@ const AboutUs: FC = () => {
 	return (
 		<section className='h-screen flex flex-col justify-center'>
 			<div className='container'>
-				<div className='flex'>
+				<div className='flex items-center justify-center'>
 					<div className='p-10 border rounded-3xl border-white text-white bg-transparent'>
 						<h1 className='text-6xl'>ТЕХНОМЕДИА —</h1>
 						<ul className='pt-5 text-xl uppercase'>
