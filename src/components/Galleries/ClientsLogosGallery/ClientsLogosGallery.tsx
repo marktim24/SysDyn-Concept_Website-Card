@@ -1,45 +1,28 @@
 import { clientsLogos } from '@/data/data'
 import { FC } from 'react'
-import { Grid } from 'swiper'
+import { Grid, Mousewheel, Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 const ClientsLogosGallery: FC = () => {
 	return (
 		<div>
 			<Swiper
-				autoplay={{ delay: 3000 }}
-				slidesPerView={3}
-				spaceBetween={25}
-				// TODO: Grid fixes
+				modules={[Navigation, Pagination, Scrollbar, Mousewheel, Grid]}
+				spaceBetween={0}
+				slidesPerView={5}
 				grid={{
 					rows: 2,
 				}}
-				// TODO: Fix the infinite loop
 				loop={true}
-				loopedSlides={3}
-				mousewheel={true}
-				breakpoints={{
-					640: {
-						width: 640,
-						slidesPerView: 2,
-					},
-					768: {
-						width: 768,
-						slidesPerView: 3,
-					},
-					1024: {
-						width: 1024,
-						slidesPerView: 4,
-					},
-				}}
-				modules={[Grid]}
+				loopedSlides={5}
+				scrollbar={{ draggable: true }}
 				direction={'horizontal'}
-				className='mySwiper'
+				mousewheel={true}
 			>
 				{clientsLogos.map((imageLogo, index) => (
-					<SwiperSlide key={index}>
+					<SwiperSlide key={index} className='flex justify-center items-center'>
 						{/* TODO: Optimize the img to Image/next */}
-						<img src={imageLogo} className='flex' alt='Our Clients Logo' />
+						<img src={imageLogo} alt='Our Clients Logo' />
 					</SwiperSlide>
 				))}
 			</Swiper>

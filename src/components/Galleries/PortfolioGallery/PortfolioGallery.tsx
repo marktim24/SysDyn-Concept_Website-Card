@@ -71,7 +71,16 @@ const PortfolioGallery: FC = () => {
 							style={{ fill: 'white' }}
 						/>
 					</div>
-					<div className='swiper-button-prev'></div>
+					<div className='swiper-button-prev'>
+						<Image
+							src='/icons/arrow-icon.svg'
+							alt='Swiper next button'
+							width={25}
+							height={25}
+							className=' bg-black rounded-full p-10 fill-white text-white'
+							style={{ fill: 'white' }}
+						/>
+					</div>
 				</Swiper>
 			</div>
 		</section>

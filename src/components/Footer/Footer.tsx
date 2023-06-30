@@ -3,10 +3,12 @@ import PhotoGallery from '../Galleries/PhotoGallery/PhotoGallery'
 
 const Footer: FC = () => {
 	return (
-		<footer className='h-screen'>
-			<PhotoGallery />
-			<div className='container flex justify-center items-center'>
-				<div>
+		<footer className='h-screen flex flex-col justify-center'>
+			<div className='flex items-center justify-center'>
+				<PhotoGallery />
+			</div>
+			<div className='container flex flex-col justify-between mt-24'>
+				<div className='flex flex-row justify-between items-center'>
 					<div>
 						<h1>Давайте обсудим!</h1>
 						<div className='buttons self-center p-12 flex flex-col sm:flex-row'>
@@ -15,17 +17,21 @@ const Footer: FC = () => {
 						</div>
 					</div>
 					<div>
-						<ul>
-							<li>ООО “Техномедиа” (ИНН 1001254842)</li>
-							<li>
-								Aдрес: г. Петрозаводск, Карелия, ул. Чапаева 45, офисы – 301-315
+						<ul className='font-unbounded text-lg'>
+							<li className='mt-5'>
+								ООО “Техномедиа” <br />
+								(ИНН 1001254842)
 							</li>
-							<li>© Техномедиа 2012-2023</li>
+							<li className='mt-5'>
+								Aдрес: г. Петрозаводск, Карелия, <br />
+								ул. Чапаева 45, офисы – 301-315
+							</li>
+							<li className='mt-5'>© Техномедиа 2012-2023</li>
 						</ul>
 					</div>
 				</div>
-				<nav>
-					<ul>
+				<nav className='flex mt-auto justify-center'>
+					<ul className='w-full flex flex-col sm:flex-row flex-wrap justify-between items-center text-xl'>
 						<li>Веб-приложений</li>
 						<li>Мобильные приложения</li>
 						<li>Руководство проектов</li>
