@@ -4,20 +4,20 @@ import PhotoGallery from '../Galleries/PhotoGallery/PhotoGallery'
 const Footer: FC = () => {
 	return (
 		<footer className='h-screen flex flex-col justify-center'>
-			<div className='flex items-center justify-center'>
-				<PhotoGallery />
-			</div>
-			<div className='container flex flex-col justify-between mt-24'>
-				<div className='flex flex-row justify-between items-center'>
-					<div>
-						<h1>Давайте обсудим!</h1>
-						<div className='buttons self-center p-12 flex flex-col sm:flex-row'>
-							<button className='btn outline'>iosemenov@sysdyn.ru</button>
-							<button className='btn fill'>+7 (931) 105-98-80</button>
+			<div className='h-screen container flex flex-col justify-around'>
+				<div className='flex items-center justify-center'>
+					<PhotoGallery />
+				</div>
+				<div className='flex flex-col justify-center items-center'>
+					<div className='grid grid-cols-2 gap-10 mx-auto justify-between items-center'>
+						<div className='flex flex-col'>
+							<h1>Давайте обсудим!</h1>
+							<div className='buttons self-center p-12 flex flex-col sm:flex-row'>
+								<button className='btn outline'>iosemenov@sysdyn.ru</button>
+								<button className='btn fill'>+7 (931) 105-98-80</button>
+							</div>
 						</div>
-					</div>
-					<div>
-						<ul className='font-unbounded text-lg'>
+						<ul className='flex flex-col font-unbounded text-lg mx-auto'>
 							<li className='mt-5'>
 								ООО “Техномедиа” <br />
 								(ИНН 1001254842)
@@ -29,16 +29,16 @@ const Footer: FC = () => {
 							<li className='mt-5'>© Техномедиа 2012-2023</li>
 						</ul>
 					</div>
+					<nav className='w-auto flex mb-auto'>
+						<ul className=' flex flex-row sm:flex-row flex-wrap justify-evenly items-center text-xl'>
+							<li className='mx-10'>Веб-приложений</li>
+							<li className='mx-10'>Мобильные приложения</li>
+							<li className='mx-10'>Руководство проектов</li>
+							<li className='mx-10'>3D в web</li>
+							<li className='mx-10'>Геймификация бизнеса</li>
+						</ul>
+					</nav>
 				</div>
-				<nav className='flex mt-auto justify-center'>
-					<ul className='w-full flex flex-col sm:flex-row flex-wrap justify-between items-center text-xl'>
-						<li>Веб-приложений</li>
-						<li>Мобильные приложения</li>
-						<li>Руководство проектов</li>
-						<li>3D в web</li>
-						<li>Геймификация бизнеса</li>
-					</ul>
-				</nav>
 			</div>
 		</footer>
 	)
